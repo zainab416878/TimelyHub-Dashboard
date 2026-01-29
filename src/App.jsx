@@ -11,31 +11,77 @@ const Page = styled.div`
 width:100vw;
 height:100vh;
 background:grey
-`
+`;
+
+const Title = styled.h1`
+margin-bottom: 0.5rem;
+`;
+
+const SubTitle = styled.p`
+color: #6a7282`
+
+const Container = styled.div`
+display: flex;
+align-items: center;
+gap: 2rem;
+margin-top: 3rem;`;
+
+const Card = styled.div`
+padding: 1rem 2rem;
+padding-left: 2rem;
+background: white;
+border-radius: 8px;
+box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
+`;
+
+const CardTitle = styled.h3`
+margin-bottom: 0.8rem;
+font-size: 1.2rem;`;
+
+const Button = styled.button`
+padding: 1rem 2rem;
+background: #28a745;
+border: none;
+border-radius: 8px;
+margin-top: 2rem;
+transition: background 0.3s;
+font-size: 1rem;
+color: white;
+cursor: pointer;
+
+&:hover {
+background: white;
+color: #28a745;
+border: 1px solid #28a745;
+border-radius: 2rem; 
+}`
+
 
 function App() {
  return (
       <>
   <DashboardLayout>
-      <h1>Daily Review Hub</h1>
-      <p>Review your past quizzes and strengthen your knowledge with spaced repetition.</p>
+      <Title>📚 DashBoard Overview</Title>
+      <SubTitle>Overview of students, courses, and instructors</SubTitle>
 
-      {/* Your quiz card, etc. */}
-      <div style={{ background: 'white', padding: '1.5rem', borderRadius: '8px', marginTop: '2rem' }}>
-        <h3>Quiz Session</h3>
-        <p>Due Now • GENERAL</p>
-        <p>Last reviewed with 3 confidence.</p>
-        <p>15 Questions</p>
+      <Container>
+        <Card>
+          <CardTitle>👤Students</CardTitle>
+          <p>Registered student </p>
+        </Card>
+        <Card>
+          <CardTitle>🎓 Courses</CardTitle>
+          <p>Available course</p>
+        </Card>
+        <Card>
+          <CardTitle>🧑‍🏫 Instructors</CardTitle>
+          <p>Active teaching</p>
+          </Card>
 
-        <div style={{ marginTop: '1.5rem', display: 'flex', gap: '1rem' }}>
-          <button style={{ background: '#dc3545', color: 'white', border: 'none', padding: '0.8rem 1.5rem', borderRadius: '6px' }}>
-            Delete
-          </button>
-          <button style={{ background: '#28a745', color: 'white', border: 'none', padding: '0.8rem 1.5rem', borderRadius: '6px' }}>
-            Start →
-          </button>
-        </div>
-      </div>
+      </Container>
+      <Button>View All Courses</Button>
+
+
     </DashboardLayout>
 
     </>
