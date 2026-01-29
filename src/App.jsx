@@ -54,7 +54,31 @@ background: white;
 color: #28a745;
 border: 1px solid #28a745;
 border-radius: 2rem; 
-}`
+}`;
+
+const EventSection = styled.div`
+margin-top: 3rem;
+`;
+
+const EventTitle = styled.h2`
+margin-bottom: 1rem;
+
+`
+
+const TimeLineContainer = styled.div`
+margin-top: 1rem;
+border-radius: 8px;
+`;
+
+const TimeLine = styled.div`
+  display: inline-block;      
+  width: 140px;
+  text-align: center;
+  padding: 1rem 0.5rem;
+  margin-right: 1rem;
+  background: #ffffff;        
+  border-radius: 6px;
+  box-shadow: 0px 1px 3px rgba(0,0,0,0.1);`
 
 
 function App() {
@@ -80,6 +104,15 @@ function App() {
 
       </Container>
       <Button>View All Courses</Button>
+      <EventSection>
+        <EventTitle>Upcoming Events</EventTitle>
+      <TimeLineContainer>
+      <TimeLine>📌 Exam</TimeLine>
+      <TimeLine>📝 Assignment</TimeLine>
+      <TimeLine>📚 New Course</TimeLine>
+      <TimeLine>🎓 Graduation</TimeLine>
+      </TimeLineContainer>
+      </EventSection>
 
 
     </DashboardLayout>
