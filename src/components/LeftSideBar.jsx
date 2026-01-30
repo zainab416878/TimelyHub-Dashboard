@@ -1,13 +1,18 @@
 // src/components/layout/LeftSidebar.jsx
 import styled from '@emotion/styled';
 import logo from "../assets/timelyhub-logo.png"
-
+import analytics from "../assets/svgexport-13.svg"
+import trivia from "../assets/svgexport-9.svg"
+import instructor from "../assets/svgexport-11.svg"
+import course from "../assets/svgexport-33.svg"
 import { GoTrophy } from "react-icons/go";
 import { AiOutlineSchedule } from "react-icons/ai";
 import { IoSettingsOutline } from "react-icons/io5";
 import { GoHistory } from "react-icons/go";
 import { TiFlashOutline } from "react-icons/ti";
 import { LuBrain } from "react-icons/lu";
+import { MdOutlineQuiz } from "react-icons/md";
+import { MdNoteAdd } from "react-icons/md";
 const Sidebar = styled.aside`
   width: 230px;
   flex-shrink: 0;
@@ -55,15 +60,15 @@ const LeftSidebar = () => {
 
       <MenuList>
         <li> <span><AiOutlineSchedule /></span>My Schedule</li>
-        <li>Uploads</li>
-        <li>Smart quiz</li>
-        <li>Courses</li>
+        <li> <span><MdNoteAdd /></span>Uploads</li>
+        <li> <span><MdOutlineQuiz /></span>Smart quiz</li>
+        <li> <span><img src={course} alt="" sizes= {20} /></span>Courses</li>
         <li><span><GoHistory /></span>Daily Review</li>
-        <li> <span><TiFlashOutline size={20}/></span>TriviaZone</li>
+        <li> <span><img src={trivia} alt="" sizes= {20} /></span>TriviaZone</li>
         <li><span><LuBrain /></span>Mind Gym</li>
-        <li>Instructor Hub</li>
+        <li><span><img src={instructor} alt="" sizes= {20} /></span>Instructor Hub</li>
         <li> <span><GoTrophy /></span>Leaderboard</li>
-        <li>Analytics</li>
+        <li> <span><img src={analytics} alt="" sizes= {20} /></span>Analytics</li>
         <li> <span><GoHistory /></span>History</li>
         <li> <span><IoSettingsOutline /></span>Setting</li>
       </MenuList>
