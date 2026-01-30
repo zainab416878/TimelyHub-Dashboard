@@ -2,7 +2,7 @@
 import styled from '@emotion/styled';
 
 const Sidebar = styled.aside`
-  width: 260px;
+  width: 230px;
   flex-shrink: 0;
   position: fixed;
   top: 0;

@@ -1,8 +1,10 @@
 // src/components/layout/LeftSidebar.jsx
 import styled from '@emotion/styled';
+import logo from "../assets/timelyhub-logo.png"
 
+import { AiOutlineSchedule } from "react-icons/ai";
 const Sidebar = styled.aside`
-  width: 260px;
+  width: 230px;
   flex-shrink: 0;
   position: fixed;
   top: 0;
@@ -24,6 +26,9 @@ const MenuList = styled.ul`
     padding: 0.8rem 1.5rem;
     cursor: pointer;
     transition: background 0.2s;
+    display:flex;
+    gap:10px;
+    alignItems: center;
 
     &:hover,
     &.active {
@@ -36,12 +41,12 @@ const MenuList = styled.ul`
 const LeftSidebar = () => {
   return (
     <Sidebar>
-      <div style={{ padding: '1.5rem 1.5rem 2rem' }}>
-        <h2 style={{ margin: 0, color: '#28a745' }}>TIMELY HUB</h2>
+      <div style={{ padding: '1rem 1rem 1rem' }}>
+        <img src= {logo} alt="" style={{width:"70%",height:"80%"}} />
       </div>
 
       <MenuList>
-        <li>My Schedule</li>
+        <li> <span><AiOutlineSchedule /></span>My Schedule</li>
         <li>Uploads</li>
         <li>Smart quiz</li>
         <li>Courses</li>
